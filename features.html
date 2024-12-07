@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Metaverse Gaming App</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Global Styles */
+    body {
+      font-family: "Press Start 2P", cursive;
+      margin: 0;
+      padding: 0;
+      background-color: #121212; /* Darker background */
+      color: #f0f0f0; /* Lighter text */
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      background: #1e1e1e;
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header .logo h1 {
+      font-size: 1.8rem;
+      color: #4caf50;
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .nav-link {
+      color: #f0f0f0;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #4caf50;
+    }
+
+    /* Cover Page */
+    .background-video {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      filter: brightness(0.7);
+    }
+
+    .main-content {
+      position: relative;
+      z-index: 10;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .main-title {
+      font-size: 4rem;
+      color: #4caf50;
+      margin-bottom: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #4caf50;
+      animation: typing 4s steps(30, end) infinite, blink 0.75s step-end infinite;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      color: #f0f0f0;
+      margin-top: 5px;
+    }
+
+    .btn-get-app {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: #121212;
+      background: #4caf50;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-get-app:hover {
+      background: #388e3c;
+      transform: scale(1.05);
+    }
+
+    @keyframes typing {
+      0% {
+        width: 0;
+      }
+      50% {
+        width: 100%;
+      }
+      100% {
+        width: 0;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    /* Rolling Text Section */
+    .rolling-section {
+      background-color: #1e1e1e; /* Rolling section background */
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .rolling-text {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #4caf50;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      position: relative;
+    }
+
+    .rolling-text span {
+      display: inline-block;
+      animation: rollText 8s linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes rollText {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-200%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h1>Metaverse Gaming App Showcase</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#">Home</a></li>
+          <li><a class="nav-link" href="#">Game</a></li>
+          <li><a class="nav-link" href="#">Market</a></li>
+          <li><a class="nav-link" href="#">Mining</a></li>
+          <li><a class="nav-link" href="#">Game Wiki</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Background Video -->
+    <video class="background-video" autoplay muted loop>
+      <source src="dracareys.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="main-content">
+      <div class="text-container">
+        <h1 class="main-title glitch" data-text="GET IN THE GAME">
+          GET IN THE GAME
+        </h1>
+        <p class="subtitle">Metaverse On-Chain Game</p>
+        <button class="btn-get-app">Get the App Now</button>
+      </div>
+    </div>
+  </main>
+
+  <section class="rolling-section">
+    <div class="rolling-text">
+      <span>DOWNLOAD NOW &nbsp;&nbsp;&nbsp;&nbsp; DOWNLOAD NOW</span>
+    </div>
+  </section>
+</body>
+</html>
